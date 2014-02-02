@@ -1,5 +1,7 @@
 # Tiny
 
+[![Build Status](https://travis-ci.org/zackkitzmiller/tiny-go.png?branch=master)](https://travis-ci.org/zackkitzmiller/tiny-go)
+
 A reversible base62 ID obfuscater
 
 ## Authors
