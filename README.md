@@ -15,7 +15,8 @@ Install via `go get`
 ## Usage
 
 ```go
-tiny := NewTiny("5SX0TEjkR1mLOw8Gvq2VyJxIFhgCAYidrclDWaM3so9bfzZpuUenKtP74QNH6B")
+completelyRandomSeed := "5SX0TEjkR1mLOw8Gvq2VyJxIFhgCAYidrclDWaM3so9bfzZpuUenKtP74QNH6B"
+tiny := NewTiny(completelyRandomSeed)
 
 fmt.Println(tiny.To(5))
 // E
