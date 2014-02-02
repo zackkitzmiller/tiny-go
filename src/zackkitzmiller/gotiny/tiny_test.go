@@ -22,9 +22,9 @@ func TestFromTiny(t *testing.T) {
 	}
 }
 
-func TestMant(t *testing.T) {
+func TestMany(t *testing.T) {
 	tiny := getTiny()
-	for i := 0; i <= 500; i++ {
+	for i := 0; i <= 500000; i++ {
 		tinied := tiny.From(tiny.To(i))
 		if tinied != i {
 			t.Errorf("expected %q, got %q", i, tinied)
