@@ -6,6 +6,10 @@ func getTiny() *tiny {
 	return NewTiny("5SX0TEjkR1mLOw8Gvq2VyJxIFhgCAYidrclDWaM3so9bfzZpuUenKtP74QNH6B")
 }
 
+func getTinyGenerateSet() *tiny {
+	return NewTiny(GenerateSet())
+}
+
 func TestToTiny(t *testing.T) {
 	tiny := getTiny()
 	converted := tiny.To(5)
@@ -24,6 +28,16 @@ func TestFromTiny(t *testing.T) {
 
 func TestMany(t *testing.T) {
 	tiny := getTiny()
+	for i := 0; i <= 500000; i++ {
+		tinied := tiny.From(tiny.To(i))
+		if tinied != i {
+			t.Errorf("expected %q, got %q", i, tinied)
+		}
+	}
+}
+
+func TestManyRandomSet(t *testing.T) {
+	tiny := getTinyGenerateSet()
 	for i := 0; i <= 500000; i++ {
 		tinied := tiny.From(tiny.To(i))
 		if tinied != i {

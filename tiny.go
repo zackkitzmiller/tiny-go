@@ -2,7 +2,9 @@ package tiny
 
 import (
 	"math"
+	"math/rand"
 	"strings"
+	"time"
 )
 
 type tiny struct {
@@ -36,4 +38,26 @@ func (t *tiny) From(tinystring string) int {
 		n += strings.Index(t.set, tinystring[i:i+1]) * int(math.Pow(float64(radix), float64((strlen-i-1))))
 	}
 	return n
+}
+
+func GenerateSet() string {
+	rand.Seed(time.Now().Unix())
+	list := []rune{}
+	for i := 65; i < 122; i++ {
+		if i < 91 || i > 96 {
+			list = append(list, rune(i))
+		}
+	}
+
+	for i := 48; i <= 57; i++ {
+		list = append(list, rune(i))
+	}
+
+	set := make([]rune, len(list))
+	perm := rand.Perm(len(list))
+	for i, v := range perm {
+		set[v] = list[i]
+	}
+
+	return string(set)
 }
