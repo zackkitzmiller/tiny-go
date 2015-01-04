@@ -1,6 +1,5 @@
-# Tiny
-
 [![Build Status](https://travis-ci.org/zackkitzmiller/tiny-go.png?branch=master)](https://travis-ci.org/zackkitzmiller/tiny-go)
+# Tiny
 
 A reversible base62 ID obfuscater
 
@@ -8,7 +7,9 @@ A reversible base62 ID obfuscater
 
 Originally by Jacob DeHart, with Ruby and Python ports by Kyle Bragger
 
-Now maintained by [Zack Kitzmiller](https://github.com/zackkitzmiller).
+Go port by [Zack Kitzmiller](https://github.com/zackkitzmiller).
+
+PHP port currently maintained by [Zack Kitzmiller](https://github.com/zackkitzmiller).
 
 ## Installation
 
