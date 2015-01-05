@@ -30,12 +30,12 @@ func (t *tiny) To(id int) string {
 }
 
 func (t *tiny) From(tinystring string) int {
-
 	radix := len(t.set)
 	strlen := len(tinystring)
 	n := 0
 	for i := 0; i < strlen; i++ {
-		n += strings.Index(t.set, tinystring[i:i+1]) * int(math.Pow(float64(radix), float64((strlen-i-1))))
+		n += strings.Index(t.set, tinystring[i:i+1]) *
+			int(math.Pow(float64(radix), float64((strlen-i-1))))
 	}
 	return n
 }
